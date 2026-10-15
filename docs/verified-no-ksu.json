@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "target_rom": "3.0.304.0.WOYMIXM.C07",
+  "kernel": "6.1.138-android14-11-Droidspaces",
+  "boot_header_version": 4,
+  "boot_size_bytes": 100663296,
+  "kernel_exactly_matches_unpatched_droidspaces_build": true,
+  "header_kernel_ramdisk_unchanged_by_avb_normalization": true,
+  "kernel_sha256": "71669d4961178957a846a7b0d25e8bda37be94cd8a739f880e3e3da5a9dc2c7d",
+  "boot_sha256": "b966c2087363848b6f1352e109cab5c417d2a38cd3696391717f708455a5e5ba",
+  "kernelsu_patch_applied": false,
+  "kernelsu_capsule_present": false,
+  "built_in_kernelsu": false,
+  "avb_hash_verified": true,
+  "avb_algorithm": "NONE",
+  "requires_unlocked_bootloader": true,
+  "device_boot_tested": false,
+  "existing_root_in_init_boot_tested": false,
+  "stock_module_crcs": {
+    "scope": "Imported symbol CRC compatibility, not a device boot test.",
+    "module_count": 789,
+    "kernel_import_checks": 39180,
+    "stock_module_imports": 5181,
+    "mismatches": [],
+    "missing_symbols": [],
+    "passed": true
+  },
+  "stock_module_signatures": {
+    "signed_modules_checked": 120,
+    "unsigned_modules": 669,
+    "failures": [],
+    "passed": true
+  },
+  "layout_check": {
+    "scope": "Selected structure sizes and baseline member bit offsets; does not validate complete KMI, symbol CRCs or stock modules.",
+    "structures": {
+      "task_struct": {
+        "baseline_size": 4800,
+        "patched_size": 4800,
+        "baseline_members_checked": 218,
+        "added_members": [
+          "sysvsem",
+          "sysvshm"
+        ]
+      },
+      "signal_struct": {
+        "baseline_size": 1128,
+        "patched_size": 1128,
+        "baseline_members_checked": 66,
+        "added_members": []
+      },
+      "user_struct": {
+        "baseline_size": 168,
+        "patched_size": 168,
+        "baseline_members_checked": 11,
+        "added_members": []
+      },
+      "mm_struct": {
+        "baseline_size": 960,
+        "patched_size": 960,
+        "baseline_members_checked": 54,
+        "added_members": []
+      },
+      "cred": {
+        "baseline_size": 176,
+        "patched_size": 176,
+        "baseline_members_checked": 27,
+        "added_members": []
+      },
+      "nsproxy": {
+        "baseline_size": 72,
+        "patched_size": 72,
+        "baseline_members_checked": 9,
+        "added_members": []
+      },
+      "inode": {
+        "baseline_size": 704,
+        "patched_size": 704,
+        "baseline_members_checked": 60,
+        "added_members": []
+      },
+      "file": {
+        "baseline_size": 264,
+        "patched_size": 264,
+        "baseline_members_checked": 24,
+        "added_members": []
+      }
+    },
+    "errors": [],
+    "passed": true
+  },
+  "drive_download_sha256_verified": true,
+  "verification_date": "2026-10-15"
+}
