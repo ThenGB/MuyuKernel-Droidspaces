@@ -5,11 +5,13 @@ Target perangkat: **Xiaomi Pad 7 Pro (`muyu`)**, stock Global
 
 Boot image Droidspaces **tanpa patch KernelSU** ada di
 `output/droidspaces-no-kernelsu/boot-Droidspaces-NO-KSU-OS3.0.304.0.WOYMIXM.img`.
-Image ini untuk partisi `boot`; `init_boot` tidak diubah. Root yang sebelumnya
-dipasang pada `init_boot` tetap perlu diuji dengan kernel baru, terutama
-kecocokan LKM-nya. Panduan dan reproduksi: [boot tanpa KernelSU](docs/FLASH-NO-KSU.md).
+Image ini untuk partisi `boot`; `init_boot` tidak diubah. Pada 15 Oktober 2026,
+pengguna melaporkan boot berhasil, KernelSU yang sudah terpasang bekerja,
+dan backend Droidspaces berstatus installed. Pengujian container dan fungsi
+hardware belum dilaporkan. Panduan dan reproduksi: [boot tanpa KernelSU](docs/FLASH-NO-KSU.md).
 Hash image dan hasil pemeriksaan offline: [laporan build](docs/verified-no-ksu.json).
-Image belum diuji boot pada tablet. Biner build berada di distribusi terpisah;
+Hasil uji perangkat ini berasal dari laporan pengguna; log perangkat belum
+tersedia. Status flash permanen belum dikonfirmasi. Biner build berada di distribusi terpisah;
 direktori `output/` tidak disimpan dalam Git.
 
 Varian terbaru dengan root ada di `output/stock-6.1.138-ksunext-lkm-spoofed/`:

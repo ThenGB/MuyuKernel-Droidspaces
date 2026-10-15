@@ -13,8 +13,9 @@ mengubah `init_boot`, `vendor_boot`, atau modul stock.
 `init_boot` yang dipatch dari ROM yang sama dapat tetap digunakan saat
 menguji boot image ini. Kesesuaian ROM membantu mempertahankan ramdisk yang
 tepat, tetapi tidak membuktikan bahwa LKM root cocok dengan kernel baru.
-Kebutuhan konfigurasi KernelSU-Next LKM sudah aktif; LKM yang terpasang
-sebelumnya dan cara pemuatannya belum diuji di tablet.
+Kebutuhan konfigurasi KernelSU-Next LKM sudah aktif. Pada 15 Oktober 2026,
+pengguna melaporkan boot berhasil dan KernelSU yang sudah terpasang bekerja
+dengan boot image tanpa patch KernelSU ini. Log pemuatan LKM belum tersedia.
 
 Jangan menambahkan patch KernelSU ke boot ini hanya karena root sudah
 dipasang melalui init_boot. Mulai dengan boot sementara jika didukung:
@@ -44,8 +45,12 @@ b966c2087363848b6f1352e109cab5c417d2a38cd3696391717f708455a5e5ba
 Payload kernel identik dengan build dasar. Header dan payload tidak berubah
 ketika footer AVB dinormalisasi. Hash AVB cocok dengan image baru; algoritma
 `NONE`, flags 0. Image unsigned dan memerlukan bootloader unlocked.
-Pemeriksaan offline tidak menggantikan uji boot atau membuktikan kebijakan
-bootloader akan menerima image ini. Tidak ada pengujian boot/root di tablet.
+Pemeriksaan offline tidak menggantikan uji pada masing-masing perangkat.
+Pengguna telah melaporkan boot dan KernelSU berhasil, serta backend
+Droidspaces berstatus installed. Keberhasilan membuat/menjalankan container,
+jaringan container, fungsi hardware, dan status flash permanen belum
+dilaporkan. Laporan ini belum disertai log perangkat dan hanya berlaku untuk
+varian tanpa patch KernelSU yang dibahas di sini, bukan varian boot LKM terpisah.
 Laporan ringkas ada di [verified-no-ksu.json](verified-no-ksu.json).
 
 ## Reproduksi dari hasil build

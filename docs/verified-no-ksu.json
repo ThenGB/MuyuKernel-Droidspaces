@@ -14,8 +14,8 @@
   "avb_hash_verified": true,
   "avb_algorithm": "NONE",
   "requires_unlocked_bootloader": true,
-  "device_boot_tested": false,
-  "existing_root_in_init_boot_tested": false,
+  "device_boot_tested": true,
+  "existing_root_in_init_boot_tested": true,
   "stock_module_crcs": {
     "scope": "Imported symbol CRC compatibility, not a device boot test.",
     "module_count": 789,
@@ -90,5 +90,21 @@
     "passed": true
   },
   "drive_download_sha256_verified": true,
-  "verification_date": "2026-10-15"
+  "verification_date": "2026-10-15",
+  "device_test_evidence": {
+    "source": "user_report_in_conversation",
+    "report_date": "2026-10-15",
+    "report_timezone": "Asia/Jakarta",
+    "user_statement": "berhasil boot, droidspaces backend sudah installed juga statusnya, kernelsu saya bekerja",
+    "boot_result": "passed_user_reported",
+    "existing_kernelsu_result": "working_user_reported",
+    "droidspaces_backend_status": "installed_user_reported",
+    "device_logs_provided": false,
+    "boot_method": "not_confirmed",
+    "permanent_flash_status": "not_confirmed",
+    "container_start_result": "not_reported",
+    "container_network_result": "not_reported",
+    "hardware_function_tests": "not_reported",
+    "scope": "No-KernelSU-patch Droidspaces boot image with existing root in init_boot; separate boot-patched LKM variant not covered"
+  }
 }
